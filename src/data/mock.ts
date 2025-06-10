@@ -8,7 +8,7 @@ export const mockItems: ContentItem[] = [
     source: 'Tech Chronicle',
     category: 'Artificial Intelligence',
     content: 'In a landmark achievement, researchers today announced that a new generation of neural networks has demonstrated comprehension abilities on par with human adults in a series of complex language and reasoning tasks. The implications for various industries are vast, from automated customer service to advanced scientific research. This new model, dubbed "Cognito-5", was trained on an unprecedentedly large dataset and employs a novel architecture that mimics certain aspects of human brain function. Experts believe this could accelerate the development of Artificial General Intelligence (AGI). The full research paper is set to be published next month, but preliminary results have already sent ripples through the tech community. Cognito-5 was able to understand nuanced humor, complex metaphors, and even detect subtle emotional tones in text, tasks that have historically been challenging for AI systems. The training process for Cognito-5 took over six months and utilized a distributed network of over 10,000 GPUs, highlighting the immense computational resources required for such advancements. Further testing is planned to assess its capabilities in real-world applications.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://placehold.co/1200x800/1A1A1A/FFFFFF.png?text=AI+News',
     timestamp: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(), // 1 hour ago
     url: '#',
     author: 'Dr. Ada Lovelace',
@@ -16,27 +16,27 @@ export const mockItems: ContentItem[] = [
   {
     id: '2',
     type: 'social',
-    title: 'Just launched my new project #N8NAutomate! Check it out for seamless workflow automation.',
-    source: 'Twitter',
-    category: 'Automation',
-    content: 'So excited to finally share #N8NAutomate with the world! Built with N8N, it helps you connect apps and automate tasks like never before. Link in bio! #Productivity #NoCode',
-    imageUrl: 'https://placehold.co/1200x675.png',
+    title: 'Destaques do Instagram',
+    source: 'Instagram',
+    category: 'Social Media',
+    content: 'As melhores publicações, stories e reels que estão bombando na plataforma. Fique por dentro das novidades.',
+    imageUrl: 'https://placehold.co/1200x800/833AB4/FFFFFF.png?text=Instagram', // Cor roxa do Instagram
     timestamp: new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString(), // 3 hours ago
     url: '#',
-    author: 'Dev Guru',
+    author: 'Insta Feed',
     avatarUrl: 'https://placehold.co/48x48.png',
   },
   {
     id: '3',
     type: 'news',
-    title: 'Global Markets React to New Economic Policies',
-    source: 'Financial Times',
-    category: 'Finance',
-    content: 'Stock markets worldwide experienced significant volatility today following the announcement of new trade and fiscal policies by several major economies. Investors are carefully watching for long-term impacts. The policies include adjustments to import tariffs and new government spending initiatives aimed at boosting domestic growth. However, concerns remain about potential inflationary pressures and disruptions to global supply chains. Currency markets also saw sharp movements, with the US dollar strengthening against a basket of other major currencies. Economists are divided on the overall outlook, with some predicting a robust recovery and others warning of a possible slowdown if international trade relations become strained. The energy sector was particularly affected, with oil prices surging due to geopolitical uncertainties and anticipated changes in demand.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    timestamp: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(), // 5 hours ago
+    title: 'Notícias do YouTube',
+    source: 'YouTube',
+    category: 'Vídeos',
+    content: 'Os vídeos e criadores em alta no momento. Conteúdo de diversas categorias para você não perder nada.',
+    imageUrl: 'https://placehold.co/1200x800/FF0000/FFFFFF.png?text=YouTube', // Cor vermelha do YouTube
+    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
     url: '#',
-    author: 'John Maynard Keynes Jr.',
+    author: 'Channel Surfer',
   },
   {
     id: '4',
@@ -45,7 +45,7 @@ export const mockItems: ContentItem[] = [
     source: 'Workplace Weekly',
     category: 'Future of Work',
     content: 'As companies navigate the post-pandemic landscape, hybrid work models are rapidly becoming the new standard. This article explores the benefits and challenges of combining remote and in-office work, and how organizations can adapt to this evolving paradigm. Many employees report higher job satisfaction and better work-life balance with hybrid arrangements, while employers see potential for reduced overhead costs and access to a wider talent pool. However, effectively managing a distributed workforce requires new tools, communication strategies, and a shift in company culture. Key challenges include maintaining team cohesion, ensuring equitable opportunities for all employees regardless of location, and addressing cybersecurity concerns associated with remote access. Successful implementation often involves clear guidelines, flexible scheduling options, and investment in technology that supports seamless collaboration.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://placehold.co/1200x800/3A3B3C/FFFFFF.png?text=Future+Work',
     timestamp: new Date(Date.now() - 10 * 60 * 60 * 1000).toISOString(), // 10 hours ago
     url: '#',
     author: 'Jane Doe',
@@ -53,13 +53,26 @@ export const mockItems: ContentItem[] = [
   {
     id: '5',
     type: 'social',
-    title: 'Exploring the latest AI trends at #AIConference2024. Mind blown by the keynote!',
-    source: 'LinkedIn',
-    category: 'Artificial Intelligence',
-    content: 'Day 1 at #AIConference2024 has been incredible! The keynote on generative AI and its ethical implications was particularly thought-provoking. Looking forward to more sessions tomorrow. #AI #MachineLearning #TechEvent',
-    timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(), // 1 day ago
+    title: 'Últimas do X (Twitter)',
+    source: 'X (Twitter)',
+    category: 'Social Media',
+    content: 'O que está bombando na rede social X. Threads, discussões e os assuntos mais comentados em tempo real.',
+    imageUrl: 'https://placehold.co/1200x800/000000/FFFFFF.png?text=X+Twitter', // Cor preta do X
+    timestamp: new Date(Date.now() - 30 * 60 * 1000).toISOString(), // 30 minutos ago
     url: '#',
-    author: 'AI Enthusiast',
+    author: 'Trend Spotter',
     avatarUrl: 'https://placehold.co/48x48.png',
+  },
+   {
+    id: '6',
+    type: 'news',
+    title: 'Novidades no TikTok',
+    source: 'TikTok',
+    category: 'Social Media',
+    content: 'As trends, desafios e vídeos virais que estão agitando o TikTok. Descubra os criadores em ascensão.',
+    imageUrl: 'https://placehold.co/1200x800/FE2C55/FFFFFF.png?text=TikTok', // Cor principal do TikTok
+    timestamp: new Date(Date.now() - 45 * 60 * 1000).toISOString(), // 45 minutos ago
+    url: '#',
+    author: 'TikToker News',
   },
 ];
