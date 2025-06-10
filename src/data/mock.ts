@@ -1,6 +1,7 @@
 import type { ContentItem } from '@/types';
 
 export const mockItems: ContentItem[] = [
+  // Itens existentes ...
   {
     id: '1',
     type: 'news',
@@ -16,12 +17,12 @@ export const mockItems: ContentItem[] = [
   {
     id: '2',
     type: 'social',
-    title: 'Destaques do Instagram',
+    title: 'Destaques do Instagram Reels',
     source: 'Instagram',
     category: 'Social Media',
-    content: 'As melhores publicações, stories e reels que estão bombando na plataforma. Fique por dentro das novidades.',
-    imageUrl: 'https://placehold.co/1200x800/833AB4/FFFFFF.png?text=Instagram', // Cor roxa do Instagram
-    timestamp: new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString(), // 3 hours ago
+    content: 'Os melhores reels que estão bombando na plataforma. Fique por dentro das novidades e virais do momento.',
+    imageUrl: 'https://placehold.co/1200x800/833AB4/FFFFFF.png?text=Instagram', 
+    timestamp: new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString(), 
     url: '#',
     author: 'Insta Feed',
     avatarUrl: 'https://placehold.co/48x48.png',
@@ -29,12 +30,12 @@ export const mockItems: ContentItem[] = [
   {
     id: '3',
     type: 'news',
-    title: 'Notícias do YouTube',
+    title: 'Tendências do YouTube Shorts',
     source: 'YouTube',
-    category: 'Vídeos',
-    content: 'Os vídeos e criadores em alta no momento. Conteúdo de diversas categorias para você não perder nada.',
-    imageUrl: 'https://placehold.co/1200x800/FF0000/FFFFFF.png?text=YouTube', // Cor vermelha do YouTube
-    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
+    category: 'Vídeos Curtos',
+    content: 'Os YouTube Shorts e criadores em alta no momento. Conteúdo rápido e dinâmico para você não perder nada.',
+    imageUrl: 'https://placehold.co/1200x800/FF0000/FFFFFF.png?text=YouTube', 
+    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), 
     url: '#',
     author: 'Channel Surfer',
   },
@@ -46,33 +47,151 @@ export const mockItems: ContentItem[] = [
     category: 'Future of Work',
     content: 'As companies navigate the post-pandemic landscape, hybrid work models are rapidly becoming the new standard. This article explores the benefits and challenges of combining remote and in-office work, and how organizations can adapt to this evolving paradigm. Many employees report higher job satisfaction and better work-life balance with hybrid arrangements, while employers see potential for reduced overhead costs and access to a wider talent pool. However, effectively managing a distributed workforce requires new tools, communication strategies, and a shift in company culture. Key challenges include maintaining team cohesion, ensuring equitable opportunities for all employees regardless of location, and addressing cybersecurity concerns associated with remote access. Successful implementation often involves clear guidelines, flexible scheduling options, and investment in technology that supports seamless collaboration.',
     imageUrl: 'https://placehold.co/1200x800/3A3B3C/FFFFFF.png?text=Future+Work',
-    timestamp: new Date(Date.now() - 10 * 60 * 60 * 1000).toISOString(), // 10 hours ago
+    timestamp: new Date(Date.now() - 10 * 60 * 60 * 1000).toISOString(), 
     url: '#',
     author: 'Jane Doe',
   },
   {
     id: '5',
     type: 'social',
-    title: 'Últimas do X (Twitter)',
+    title: 'Últimas Threads do X (Twitter)',
     source: 'X (Twitter)',
-    category: 'Social Media',
+    category: 'Microblogging',
     content: 'O que está bombando na rede social X. Threads, discussões e os assuntos mais comentados em tempo real.',
-    imageUrl: 'https://placehold.co/1200x800/000000/FFFFFF.png?text=X+Twitter', // Cor preta do X
-    timestamp: new Date(Date.now() - 30 * 60 * 1000).toISOString(), // 30 minutos ago
+    imageUrl: 'https://placehold.co/1200x800/000000/FFFFFF.png?text=X+Twitter', 
+    timestamp: new Date(Date.now() - 30 * 60 * 1000).toISOString(), 
     url: '#',
     author: 'Trend Spotter',
     avatarUrl: 'https://placehold.co/48x48.png',
   },
    {
     id: '6',
-    type: 'news',
-    title: 'Novidades no TikTok',
+    type: 'social',
+    title: 'Virais do TikTok',
     source: 'TikTok',
-    category: 'Social Media',
+    category: 'Vídeos Curtos',
     content: 'As trends, desafios e vídeos virais que estão agitando o TikTok. Descubra os criadores em ascensão.',
-    imageUrl: 'https://placehold.co/1200x800/FE2C55/FFFFFF.png?text=TikTok', // Cor principal do TikTok
-    timestamp: new Date(Date.now() - 45 * 60 * 1000).toISOString(), // 45 minutos ago
+    imageUrl: 'https://placehold.co/1200x800/FE2C55/FFFFFF.png?text=TikTok', 
+    timestamp: new Date(Date.now() - 45 * 60 * 1000).toISOString(), 
     url: '#',
     author: 'TikToker News',
+    avatarUrl: 'https://placehold.co/48x48.png',
   },
+  // Novos itens para YouTube
+  {
+    id: 'yt1',
+    type: 'news',
+    title: 'Top 10 Músicas Mais Tocadas da Semana',
+    source: 'YouTube',
+    category: 'Música',
+    content: 'Descubra as músicas que estão dominando as paradas no YouTube esta semana. Inclui clipes e tendências.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(),
+    url: '#',
+    author: 'MusicVibes',
+  },
+  {
+    id: 'yt2',
+    type: 'news',
+    title: 'Como Ganhar Dinheiro Online em 2024',
+    source: 'YouTube',
+    category: 'Finanças',
+    content: 'Um guia completo com estratégias comprovadas para monetizar suas habilidades e presença online no YouTube.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(),
+    url: '#',
+    author: 'LifeHacks',
+  },
+  {
+    id: 'yt3',
+    type: 'news',
+    title: 'Review Completo: Novo Smartphone XYZ',
+    source: 'YouTube',
+    category: 'Tecnologia',
+    content: 'Análise detalhada do mais recente lançamento de smartphone, cobrindo design, performance e câmeras.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 7 * 60 * 60 * 1000).toISOString(),
+    url: '#',
+    author: 'TechReviewBR',
+  },
+  // Novos itens para TikTok
+  {
+    id: 'tk1',
+    type: 'social',
+    title: 'Comédia do Dia a Dia no TikTok',
+    source: 'TikTok',
+    category: 'Entretenimento',
+    content: 'Vídeo curto e viral que está bombando na plataforma. Assista agora e divirta-se com o cotidiano.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(),
+    url: '#',
+    author: '@beauty_tips',
+    avatarUrl: 'https://placehold.co/48x48.png'
+  },
+  {
+    id: 'tk2',
+    type: 'social',
+    title: 'Trend Musical do Momento no TikTok',
+    source: 'TikTok',
+    category: 'Música',
+    content: 'Nova dança e música que viralizaram. Aprenda os passos e participe da trend que conquistou o TikTok.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+    url: '#',
+    author: '@life_hacks',
+    avatarUrl: 'https://placehold.co/48x48.png'
+  },
+  {
+    id: 'tk3',
+    type: 'social',
+    title: 'Transformação Incrível com Maquiagem',
+    source: 'TikTok',
+    category: 'Beleza',
+    content: 'Assista a esta transformação surpreendente usando técnicas de maquiagem. O resultado é de tirar o fôlego!',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 2 * 30 * 60 * 1000).toISOString(), // 1 hour ago
+    url: '#',
+    author: '@dance_queens',
+    avatarUrl: 'https://placehold.co/48x48.png'
+  },
+  // Novos itens para X (Twitter)
+  {
+    id: 'tw1',
+    type: 'social',
+    title: 'Thread: Dicas de Produtividade Essenciais',
+    source: 'X (Twitter)',
+    category: 'Desenvolvimento Pessoal',
+    content: 'Thread importante sobre assuntos relevantes e atuais. Confira a discussão completa e melhore sua rotina.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 40 * 60 * 1000).toISOString(),
+    url: '#',
+    author: '@ai_researcher',
+    avatarUrl: 'https://placehold.co/48x48.png'
+  },
+  {
+    id: 'tw2',
+    type: 'social',
+    title: 'Debate Político Acende no X',
+    source: 'X (Twitter)',
+    category: 'Notícias',
+    content: 'As últimas atualizações e discussões sobre o cenário político nacional e internacional no X (Twitter).',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(),
+    url: '#',
+    author: '@political_talk',
+    avatarUrl: 'https://placehold.co/48x48.png'
+  },
+  {
+    id: 'tw3',
+    type: 'social',
+    title: 'Inovação Tecnológica em Destaque',
+    source: 'X (Twitter)',
+    category: 'Tecnologia',
+    content: 'Acompanhe os tweets e discussões sobre as mais recentes inovações tecnológicas e startups promissoras.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+    url: '#',
+    author: '@tech_guru',
+    avatarUrl: 'https://placehold.co/48x48.png'
+  }
 ];
