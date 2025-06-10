@@ -2,6 +2,7 @@
 'use client';
 
 import { ContentPlatformSection } from '@/components/content/ContentPlatformSection';
+import { FeaturedCarousel } from '@/components/content/FeaturedCarousel'; // Importar o FeaturedCarousel
 import { mockItems } from '@/data/mock';
 import type { ContentItem } from '@/types';
 
@@ -33,14 +34,19 @@ const TikTokIconSection = () => (
 
 const InstagramIconSection = () => (
   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.268.058 2.15.247 2.908.542.844.318 1.496.77 2.058 1.332s1.013 1.214 1.332 2.058c.295.758.484 1.64.542 2.908.058 1.267.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.058 1.268-.247 2.15-.542 2.908-.318.844-.77 1.496-1.332 2.058s-1.214 1.013-2.058 1.332c-.758.295-1.64.484-2.908.542-1.267.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.268-.058-2.15-.247-2.908-.542-.844-.318-1.496-.77-2.058-1.332s-1.013-1.214-1.332-2.058c-.295-.758-.484-1.64-.542-2.908-.058-1.267-.07-1.646-.07-4.85s.012-3.584.07-4.85c.058-1.268.247-2.15.542-2.908.318-.844.77-1.496 1.332-2.058S4.76 3.221 5.604 2.903c.758-.295 1.64-.484 2.908-.542C9.783 2.175 10.144 2.163 12 2.163zm0 1.802c-3.116 0-3.476.011-4.69.068-1.17.053-1.846.228-2.362.423-.624.234-1.074.556-1.548 1.03-.474.473-.796.924-1.03 1.548-.195.516-.37 1.192-.423 2.362C2.011 8.524 2 8.884 2 12s.011 3.476.068 4.69c.053 1.17.228 1.846.423 2.362.234.624.556 1.074 1.03 1.548.473.474.924.796 1.548 1.03.516.195 1.192.37 2.362.423 1.214.057 1.574.068 4.69.068s3.476-.011 4.69-.068c1.17-.053 1.846-.228 2.362-.423.624-.234 1.074-.556 1.548-1.03.474-.473.796-.924 1.03-1.548.195-.516-.37-1.192-.423-2.362.057-1.214.068-1.574.068-4.69s-.011-3.476-.068-4.69c-.053-1.17-.228-1.846-.423-2.362-.234-.624-.556-1.074-1.03-1.548-.473-.474-.924-.796-1.548-1.03-.516-.195-1.192-.37-2.362-.423C15.476 3.976 15.116 3.965 12 3.965zm0 2.923c-2.761 0-5.001 2.24-5.001 5.001s2.24 5.001 5.001 5.001 5.001-2.24 5.001-5.001-2.24-5.001-5.001-5.001zm0 8.188c-1.758 0-3.188-1.43-3.188-3.188s1.43-3.188 3.188-3.188 3.188 1.43 3.188 3.188-1.43 3.188-3.188 3.188zm4.187-8.122a1.237 1.237 0 11-2.474 0 1.237 1.237 0 012.474 0z"/>
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.268.058 2.15.247 2.908.542.844.318 1.496.77 2.058 1.332s1.013 1.214 1.332 2.058c.295.758.484 1.64.542 2.908.058 1.267.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.058 1.268-.247 2.15-.542 2.908-.318.844-.77 1.496-1.332 2.058s-1.214 1.013-2.058 1.332c-.758.295-1.64.484-2.908.542-1.267.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.268-.058-2.15-.247-2.908-.542-.844-.318-1.496-.77-2.058-1.332s-1.013-1.214-1.332-2.058c-.295-.758-.484-1.64-.542-2.908-.058-1.267-.07-1.646-.07-4.85s.012-3.584.07-4.85c.058-1.268.247 2.15.542 2.908.318.844.77 1.496 1.332 2.058S4.76 3.221 5.604 2.903c.758-.295 1.64-.484 2.908-.542C9.783 2.175 10.144 2.163 12 2.163zm0 1.802c-3.116 0-3.476.011-4.69.068-1.17.053-1.846.228-2.362.423-.624.234-1.074.556-1.548 1.03-.474.473-.796.924-1.03 1.548-.195.516-.37 1.192-.423 2.362C2.011 8.524 2 8.884 2 12s.011 3.476.068 4.69c.053 1.17.228 1.846.423 2.362.234.624.556 1.074 1.03 1.548.473.474.924.796 1.548 1.03.516.195 1.192.37 2.362.423 1.214.057 1.574.068 4.69.068s3.476-.011 4.69-.068c1.17-.053 1.846-.228 2.362-.423.624-.234 1.074-.556 1.548-1.03.474-.473.796-.924 1.03-1.548.195-.516-.37-1.192-.423-2.362.057-1.214.068-1.574.068-4.69s-.011-3.476-.068-4.69c-.053-1.17-.228-1.846-.423-2.362-.234-.624-.556-1.074-1.03-1.548-.473-.474-.924-.796-1.548-1.03-.516-.195-1.192-.37-2.362-.423C15.476 3.976 15.116 3.965 12 3.965zm0 2.923c-2.761 0-5.001 2.24-5.001 5.001s2.24 5.001 5.001 5.001 5.001-2.24 5.001-5.001-2.24-5.001-5.001-5.001zm0 8.188c-1.758 0-3.188-1.43-3.188-3.188s1.43-3.188 3.188-3.188 3.188 1.43 3.188 3.188-1.43 3.188-3.188 3.188zm4.187-8.122a1.237 1.237 0 11-2.474 0 1.237 1.237 0 012.474 0z"/>
   </svg>
 );
 
 
 export default function Home() {
-  // Itens para "Últimas Notícias" - os 3 mais recentes de todas as fontes
-  const ultimasNoticiasItems = mockItems
+  // Itens para o FeaturedCarousel - os 5 mais recentes de todas as fontes
+  const featuredCarouselItems = mockItems
+    .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
+    .slice(0, 5);
+
+  // Itens para a seção "Últimas Notícias" (cards) - os 3 mais recentes de todas as fontes
+  const ultimasNoticiasCardsItems = mockItems
     .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
     .slice(0, 3);
 
@@ -49,7 +55,7 @@ export default function Home() {
     {
       title: 'Últimas Notícias',
       icon: <UltimasNoticiasIcon />,
-      items: ultimasNoticiasItems, // Itens já filtrados e ordenados
+      items: ultimasNoticiasCardsItems, // Itens já filtrados e ordenados para os cards
     },
     {
       title: 'YouTube',
@@ -73,9 +79,9 @@ export default function Home() {
     },
   ];
 
-  // Prepara os itens para cada seção da plataforma
+  // Prepara os itens para cada seção da plataforma (exceto "Últimas Notícias" que já tem seus itens)
   const platformSections = platformSectionsConfig.map(section => {
-    if (section.items) { // Se os itens já foram fornecidos (caso de Últimas Notícias)
+    if (section.items) { // Se os itens já foram fornecidos (caso de Últimas Notícias cards)
       return section;
     }
     const filteredItems = mockItems
@@ -99,7 +105,10 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Content Platform Sections */}
+      {/* Featured Carousel Section */}
+      <FeaturedCarousel items={featuredCarouselItems} />
+
+      {/* Content Platform Sections (Cards) */}
       {platformSections.map(section => (
         <ContentPlatformSection
           key={section.title}
@@ -112,5 +121,3 @@ export default function Home() {
     </>
   );
 }
-
-    
