@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 // import { Badge } from '@/components/ui/badge'; // Removido pois não está sendo usado no design atual do card
 import Image from 'next/image';
-import { Wand2, Bookmark, ExternalLink, Globe, MessageSquare, Newspaper, Cpu, DollarSign, TrendingUp, CalendarDays, UserCircle, Youtube, Twitch, PlaySquare } from 'lucide-react';
+import { Wand2, Bookmark, ExternalLink, Globe, MessageSquare, Newspaper, Cpu, DollarSign, TrendingUp, CalendarDays, UserCircle, Youtube, Twitch, PlaySquare, Instagram } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { getSmartSummary } from '@/lib/actions';
 import { useToast } from "@/hooks/use-toast";
@@ -42,6 +42,9 @@ const CategoryIcon: React.FC<{ category: string }> = ({ category }) => {
     case 'desenvolvimento pessoal':
     case 'notícias': // Categoria genérica para notícias do Twitter
     case 'beleza': // Categoria para TikTok de maquiagem
+    case 'viagem': // Categoria para Instagram de viagem
+    case 'culinária': // Categoria para Instagram de culinária
+    case 'moda': // Categoria para Instagram de moda
       return <MessageSquare className="h-4 w-4 mr-1" />;
     default:
       return <Newspaper className="h-4 w-4 mr-1" />;
@@ -59,7 +62,10 @@ const SourceIconInternal: React.FC<{ sourceName: string, type: 'news' | 'social'
   }
   if (lowerSourceName.includes('tiktok')) {
     // Usando um ícone genérico de vídeo/social para TikTok por enquanto, ou pode-se adicionar um SVG específico
-    return <PlaySquare className="h-4 w-4 mr-1" />; // Ou MessageSquare
+    return <svg width="16" height="18" viewBox="0 0 28 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="mr-1 h-4 w-4"><path d="M20.673 0.00012207C18.2666 -0.0988707 16.0815 1.21064 15.1003 3.30488C15.0217 3.47803 14.9633 3.65766 14.9233 3.83988V16.6084C14.9283 18.9163 14.0098 21.139 12.3708 22.7855C10.7318 24.4321 8.51469 25.3524 6.2099 25.3495C3.82835 25.3495 1.61983 24.3709 0 22.7118V27.4832C1.67081 29.2337 3.90559 30.2645 6.2423 30.2674H6.34681C10.0959 30.2674 13.4342 28.0051 14.7423 24.5895C14.8607 24.2988 14.9233 23.9758 14.9233 23.617V8.4015C14.9233 8.0175 15.0058 7.6485 15.1843 7.33075C15.9728 5.80363 17.6298 4.7175 19.4633 4.7175C20.218 4.7175 20.9378 4.89738 21.5618 5.22738V0.747878C21.2695 0.253378 20.9095 -0.00262221 20.673 0.00012207Z" /><path d="M28.0001 10.5489C24.7629 10.5489 22.0774 13.2344 22.0774 16.4716C22.0774 19.7088 24.7629 22.3943 28.0001 22.3943V27.117C22.0646 27.117 17.3418 22.3943 17.3418 16.4588C17.3418 10.5362 22.0646 5.79956 28.0001 5.79956V10.5489Z" /></svg>;
+  }
+  if (lowerSourceName.includes('instagram')) {
+    return <Instagram className="h-4 w-4 mr-1 text-[#E1306C]" />;
   }
   if (type === 'social') {
     return <MessageSquare className="h-4 w-4 mr-1" />;
