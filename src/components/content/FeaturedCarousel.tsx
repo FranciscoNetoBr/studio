@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -68,6 +69,12 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
 
+  const featuredItems = React.useMemo(() => items.slice(0, 5), [items]);
+
+  const [timeAgoStrings, setTimeAgoStrings] = React.useState<string[]>(() =>
+    featuredItems.map(() => "")
+  );
+
   React.useEffect(() => {
     if (!api) {
       return
@@ -81,7 +88,15 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
     })
   }, [api])
 
-  const featuredItems = items.slice(0, 5) // Pegar apenas os 5 primeiros itens
+  React.useEffect(() => {
+    const calculatedTimeAges = featuredItems.map(item =>
+      formatDistanceToNow(new Date(item.timestamp), {
+        addSuffix: true,
+        locale: ptBR,
+      })
+    );
+    setTimeAgoStrings(calculatedTimeAges);
+  }, [featuredItems]);
 
   if (featuredItems.length === 0) {
     return (
@@ -90,7 +105,7 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
       </div>
     )
   }
-  
+
   const handleDotClick = (index: number) => {
     api?.scrollTo(index)
   }
@@ -101,10 +116,7 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
         <Carousel setApi={setApi} className="relative" opts={{ loop: true }}>
           <CarouselContent>
             {featuredItems.map((item, index) => {
-              const timeAgo = formatDistanceToNow(new Date(item.timestamp), {
-                addSuffix: true,
-                locale: ptBR,
-              })
+              const timeAgo = timeAgoStrings[index] || "";
               return (
                 <CarouselItem key={item.id} className="md:basis-1/1 lg:basis-1/1">
                   <div className="h-[500px] min-h-[400px] rounded-lg relative overflow-hidden shadow-2xl group">
@@ -119,13 +131,13 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                    
+
                     <div className="absolute top-6 left-6 z-10 flex items-center space-x-2 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
                       <SourceIcon sourceName={item.source} />
                       <span className="text-white text-xs font-medium">
                         {item.source}
                       </span>
-                      <span className="text-neutral-400 text-xs">· {timeAgo}</span>
+                      {timeAgo && <span className="text-neutral-400 text-xs">· {timeAgo}</span>}
                     </div>
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10 text-left">
@@ -133,7 +145,7 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
                         {item.title}
                       </h2>
                       <p className="text-neutral-300 text-sm md:text-base line-clamp-2">
-                        {item.content} 
+                        {item.content}
                       </p>
                     </div>
                   </div>
@@ -147,7 +159,7 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
           <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white border-none h-10 w-10">
             <ChevronRight size={24} />
           </CarouselNext>
-          
+
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
             {Array.from({ length: count }).map((_, index) => (
               <Button
@@ -165,3 +177,5 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
     </section>
   )
 }
+
+    
