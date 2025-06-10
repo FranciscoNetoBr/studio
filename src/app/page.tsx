@@ -46,16 +46,16 @@ export default function Home() {
       filterSource: 'YouTube',
     },
     {
-      title: 'TikTok',
-      icon: <TikTokIconSection />,
-      items: [],
-      filterSource: 'TikTok',
-    },
-    {
       title: 'X (Twitter)',
       icon: <XTwitterIconSection />,
       items: [],
       filterSource: 'X (Twitter)',
+    },
+    {
+      title: 'TikTok',
+      icon: <TikTokIconSection />,
+      items: [],
+      filterSource: 'TikTok',
     },
     {
       title: 'Instagram',
