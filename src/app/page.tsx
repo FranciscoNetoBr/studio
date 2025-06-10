@@ -2,7 +2,7 @@
 'use client';
 
 import { ContentPlatformSection } from '@/components/content/ContentPlatformSection';
-import { FeaturedCarousel } from '@/components/content/FeaturedCarousel'; // Importar o FeaturedCarousel
+import { FeaturedCarousel } from '@/components/content/FeaturedCarousel'; 
 import { mockItems } from '@/data/mock';
 import type { ContentItem } from '@/types';
 
@@ -96,7 +96,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-background text-foreground py-16 md:py-24">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-headline mb-6 leading-tight">
             Acompanhe as últimas tendências e notícias das principais plataformas em um só lugar.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-12">

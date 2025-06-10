@@ -119,7 +119,7 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
               const timeAgo = timeAgoStrings[index] || "";
               return (
                 <CarouselItem key={item.id} className="md:basis-1/1 lg:basis-1/1">
-                  <div className="h-[500px] min-h-[400px] rounded-lg relative overflow-hidden shadow-2xl group">
+                  <div className="h-[400px] min-h-[320px] rounded-lg relative overflow-hidden shadow-2xl group">
                     {item.imageUrl && (
                       <Image
                         src={item.imageUrl}
@@ -177,5 +177,3 @@ export function FeaturedCarousel({ items }: FeaturedCarouselProps) {
     </section>
   )
 }
-
-    
